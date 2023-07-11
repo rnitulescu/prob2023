@@ -229,10 +229,12 @@
 
 
 %%%%
-%% Intuition
+%% Intuition à propos de la probabilité
 %%%%
 
-\section{Intuition}
+\section{Intuition à propos de la probabilité}
+
+%% Monty Hall problem
 
 \begin{frame}
     \frametitle{Le problème \emph{Monty Hall}}
@@ -270,13 +272,32 @@
 
     \bigskip \pause
 
-    Donc, on est incertain entre deux possibilités:
+    Donc, on est \emph{incertain} entre deux possibilités:
     soit (1) le lot gagnant est derrière notre premier choix de porte,
     ou (2) le lot gagnant n’est pas derrière notre premier choix de porte.    
 \end{frame}
 
 
-%% TEST
+\begin{frame}
+    \frametitle{Solution au problème \emph{Monty Hall}}
+    On commence par compter toutes les possibilités: \pause
+    \begin{itemize}
+      \item Le lot gagnant pourrait être derrière n’importe laquelle
+            des \emph{trois} portes, \emph{a priori} \pause
+      \item On à fait un choix sur \emph{trois} possibilités
+    \end{itemize}
+
+    \bigskip \pause
+
+    Donc, si on croise ces deux ensembles de possibilités,
+    on trouve \emph{neuf} possibilités au total.\\
+
+    \bigskip \pause
+
+    On peut montrer ces possibilités de façon graphique.
+\end{frame}
+
+
 \begin{frame}
     \begin{figure}
       \centering
@@ -284,13 +305,69 @@
     \end{figure}
 \end{frame}
 
+
 \begin{frame}
-    \begin{figure}
-      \centering
-      \scalebox{0.60}{\input{content/monty_hall_tree_case_1.tex}}
-    \end{figure}
+    \frametitle{Solution au problème \emph{Monty Hall}}
+    Dans l’état 1 (‘on a choisi la bonne porte’),
+    on gagne avec certitude si on ‘reste’ (3 cas sur 9).\\
+
+    \vfill \pause
+
+    Dans l’état 2 (‘on a choisi une des mauvaises portes’),
+    on gagne avec certitude si on ‘change’ (6 cas sur 9).\\
+
+    \vfill \pause
+
+    Notre hypothèse (très raisonnable) est que \emph{a priori}:
+    \begin{enumerate}
+      \item toutes les trois portes ont une chance égale de cacher le lot gagnant
+      \item on n’a aucune préférence particulière pour faire notre choix de porte
+    \end{enumerate}
+
+    \vfill \pause
+
+    Puisque les neuf possibilités sont équiprobables, par nos hypothèses, on à notre réponse:\\
+
+    \vfill \pause
+
+    On est mieux de \emph{changer}, peut-importe notre choix initial,
+    puisque cela nous donne \textbf{6} chances sur \textbf{9} de gagner
+    versus les \textbf{3} chances sur \textbf{9} si on \emph{reste}.
 \end{frame}
 
+
+%\begin{frame}
+%    \begin{figure}
+%      \centering
+%      \scalebox{0.60}{\input{content/monty_hall_tree_case_1.tex}}
+%    \end{figure}
+%\end{frame}
+
+
+%% Tentative sections...
+\section{Le concept de probabilité}
+
+\section{Le calcul de probabilité}
+
+\section{L'inférence probabiliste}
+
+\subsection{Incertitude due à l'aléa des observations}%% binomial & negative binomial examples?
+%% also some typical frequentist tests, like the Student's t-test
+
+\subsection{Incertitude due à un manque de connaissance}%% recall Monty Hall problem (maybe show formal prob. theory solution.)
+%% monty hall case, the categorial parameter is unknown. But we can have unknown continuous parameters, etc.
+
+\subsection{Incertitude due aux deux}
+
+%% what we take as known, what we take as unknown...
+
+%% Idea: maybe illustrate each application area with simple, accessible examples, and then show that
+%%       this is what is done when we use more advanced standard procedures that often require specialized software?
+
+%% Do we cover CLT, estimation theory (bias, MSE, MM, ML)???
+
+%% I want to maximize the conceptual content, and not focus as much on the technical depth
+%% But I also want to show some cool stuff like CLT and Laplace approximaiton (a way to also derive the Normal pdf...)
 
 %% END DOCUMENT
 \end{document}
