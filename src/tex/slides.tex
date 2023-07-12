@@ -235,17 +235,19 @@
 \section{Intuition à propos de la probabilité}
 
 %% Monty Hall problem
+%\subsection{Le problème \emph{Monty Hall}}
 
 \begin{frame}
     \frametitle{Le problème \emph{Monty Hall}}
-    Vous participez à un jeu télévisé.
+    \emph{
+    ``Vous participez à un jeu télévisé.
     L’animateur vous demande de choisir une porte parmi les trois possibles.
     Le lot gagnant se trouve derrière seulement une des trois portes.
     Une fois votre choix fait, l’animateur ouvre une des trois portes.
     Mais pour garder le suspense, l’animateur n’ouvre ni la porte que
     vous avec choisi, ni la porte gagnante.
-    Finalement, l’animateur vous demande si vous voudriez changez de choix
-    pour l’autre porte qui n’est pas encore ouverte.\\
+    Finalement, l’animateur vous demande si vous voudriez changer de choix
+    pour l’autre porte qui n’est pas encore ouverte.''}\\
 
     \bigskip \pause
 
@@ -267,34 +269,17 @@
     \bigskip \pause
 
     Si on savait que le lot gagnant était derrière notre premier choix de porte,
-    on ne changerait pas de choix. Et vice-versa, si on savait que le lot gagnant
-    n’était pas derrière notre premier choix de porte, alors on changerait de choix.\\
+    on ne changerait pas de choix.\\ %Et vice-versa, si on savait que le lot gagnant
+    %n’était pas derrière notre premier choix de porte, alors on changerait de choix.\\
 
     \bigskip \pause
 
-    Donc, on est \emph{incertain} entre deux possibilités:
-    soit (1) le lot gagnant est derrière notre premier choix de porte,
-    ou (2) le lot gagnant n’est pas derrière notre premier choix de porte.    
-\end{frame}
-
-
-\begin{frame}
-    \frametitle{Solution au problème \emph{Monty Hall}}
-    On commence par compter toutes les possibilités: \pause
-    \begin{itemize}
-      \item Le lot gagnant pourrait être derrière n’importe laquelle
-            des \emph{trois} portes, \emph{a priori} \pause
-      \item On à fait un choix sur \emph{trois} possibilités
-    \end{itemize}
+    Mais, puisqu’il y a \emph{une chance sur trois} qu’on a choisi la bonne porte au début,
+    si on choisi de ‘rester’, on gagnera seulement \emph{une fois sur trois}.\\
 
     \bigskip \pause
 
-    Donc, si on croise ces deux ensembles de possibilités,
-    on trouve \emph{neuf} possibilités au total.\\
-
-    \bigskip \pause
-
-    On peut montrer ces possibilités de façon graphique.
+    Voici un diagramme des possibilités.
 \end{frame}
 
 
@@ -302,6 +287,14 @@
     \begin{figure}
       \centering
       \scalebox{0.60}{\input{content/monty_hall_tree_start.tex}}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \begin{figure}
+      \centering
+      \scalebox{0.60}{\input{content/monty_hall_tree_case_1.tex}}
     \end{figure}
 \end{frame}
 
@@ -336,12 +329,25 @@
 \end{frame}
 
 
-%\begin{frame}
-%    \begin{figure}
-%      \centering
-%      \scalebox{0.60}{\input{content/monty_hall_tree_case_1.tex}}
-%    \end{figure}
-%\end{frame}
+\begin{frame}
+    \frametitle{Solution au problème \emph{Monty Hall}}
+    Caractéristiques du problème qu’on vient de résoudre: \pause
+    \begin{itemize}
+      \item On connais les chances de gagner (les règles du jeu) \pause
+      \item On est incertain à propos de notre décision de quelle porte choisir au début  \pause
+      \item Ensuite on est incertain à propos de la meilleure stratégie (‘rester’ ou ‘changer’)  \pause
+      \item Mais, on à été capable de \emph{déduire} quelle était la meilleure stratégie,
+            \emph{en connaissant les règles du jeu}
+    \end{itemize}
+
+    \vfill \pause
+
+    Les premières applications qui on donnés naissance au concept et
+    à la théorie de la probabilité en Europe étaient des questions à propos
+    des jeux de hasard (ex: correspondance entre Fermat et Pascal au 17\textsuperscript{e} siècle)
+\end{frame}
+
+
 
 
 %% Tentative sections...
@@ -368,6 +374,7 @@
 
 %% I want to maximize the conceptual content, and not focus as much on the technical depth
 %% But I also want to show some cool stuff like CLT and Laplace approximaiton (a way to also derive the Normal pdf...)
+
 
 %% END DOCUMENT
 \end{document}
